@@ -1,0 +1,33 @@
+{
+  "manifest_version": 3,
+  "name": "Monday.com: Copy item link as Markdown",
+  "version": "1.0",
+  "description": "Adds a 'Copy item link as Markdown' option to Monday.com items.",
+  "icons": {
+    "48": "icons/icon-48.png"
+  },
+  "permissions": [
+    "clipboardWrite",
+    "scripting"
+  ],
+  "host_permissions": [
+    "*://*.monday.com/*"
+  ],
+  "content_scripts": [
+    {
+      "matches": ["*://*.monday.com/*"],
+      "js": ["content-script.js"],
+      "run_at": "document_idle"
+    }
+  ],
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "@monday-md-copy.david-nixon",
+      "strict_min_version": "140.0",
+      "data_collection_permissions": {
+        "required": ["none"]
+      }
+    }
+  }
+}
+

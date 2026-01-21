@@ -22,7 +22,6 @@ function normalizeMondayItemUrl(url = window.location.href) {
     return boardPart + pulsePart;
 }
 
-
 // Try to find the item title and link from a menu element.
 // You will likely want to adjust this depending on monday.com's DOM.
 function getItemInfoFromMenuNode(menuNode) {
@@ -79,8 +78,8 @@ function enhanceMenu(menuNode) {
     const copyItemLink = Array.from(
         menuNode.querySelectorAll("li, button, [role='menuitem']")
     ).find((el) => {
-        const text = el.textContent && el.textContent.trim().toLowerCase();
-        return text === "copy item link";
+        const text = el.textContent && el.textContent.trim().toLowerCase().replace(/\s+/g, " ");
+        return text === "copy item link" || text === "copy feature link";
     });
 
     if (!copyItemLink) return;

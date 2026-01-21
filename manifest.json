@@ -1,7 +1,7 @@
 {
   "manifest_version": 3,
   "name": "Monday.com: Copy item link as Markdown",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Adds a 'Copy item link as Markdown' option to Monday.com items.",
   "icons": {
     "48": "icons/icon-48.png"

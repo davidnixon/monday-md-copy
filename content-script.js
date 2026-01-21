@@ -44,9 +44,11 @@ function normalizeMondayItemUrl(url = window.location.href) {
  */
 function getItemInfoFromMenuNode(menuNode) {
     // monday.com's item page usually has a .title-wrapper containing the item name
-    const titleWrapperEl = menuNode.closest('.title-wrapper');
+    let titleWrapperEl = menuNode.closest('.title-wrapper');
+    if (!titleWrapperEl)
+        titleWrapperEl = document.querySelector('[data-testid="editable-heading"]');
     if (!titleWrapperEl) {
-        console.warn("Could not find related title for menu.");
+        console.warn("Could not find title for menu.");
         return null;
     }
 
@@ -89,7 +91,7 @@ function createMarkdownMenuItem(originalMenuItem) {
 
         const markdown = `[${info.title}](${info.url})`;
         // Copy to clipboard and then close the menu by clicking the trigger button
-        copyToClipboard(markdown).then(document.querySelector('.pulse-page-menu-button').click());
+        copyToClipboard(markdown).then(document.querySelector('div.ds-menu-button.open').click());
     });
 
     return newItem;

@@ -14,6 +14,9 @@ When you click it, the extension copies a Markdown-formatted link of the current
 Why? It’s convenient for pasting into docs, GitHub/GitLab issues, Slack (with Markdown rendering), Notion, or any editor
 that supports Markdown.
 
+### Get the extension
+[![Firefox Add-on](./images/get-the-addon.webp)](https://addons.mozilla.org/firefox/downloads/file/4671947/3daad24b91e84649935c-1.0.2.xpi)
+
 ### Features
 
 - Adds a sibling menu item next to Monday.com’s built‑in **Copy item link**.
@@ -96,6 +99,4 @@ Note on Chrome/Chromium
 - The code is based on standard WebExtension APIs and may also work in Chromium-based browsers with minor changes.
   However, this repository targets Firefox by default.
 
-### Get the extension
-[![Firefox Add-on](./images/get-the-addon.webp)](https://addons.mozilla.org/firefox/downloads/file/4671947/3daad24b91e84649935c-1.0.2.xpi)
 
